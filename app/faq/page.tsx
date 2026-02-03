@@ -1,5 +1,6 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import CTAButton from '@/components/CTAButton'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -130,37 +131,37 @@ export default function FAQ() {
       <Header />
       <main>
         {/* Hero */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-white">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a]">
           <div className="mx-auto max-w-4xl text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Frequently Asked Questions
             </h1>
-            <p className="text-xl text-gray-700">
+            <p className="text-xl text-gray-400">
               Got questions? We've got answers.
             </p>
           </div>
         </section>
 
         {/* FAQs */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#0a0a0a]">
           <div className="mx-auto max-w-3xl">
             <div className="space-y-12">
               {faqs.map((section, idx) => (
                 <div key={idx}>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6 pb-4 border-b-2 border-brand">
+                  <h2 className="text-2xl font-bold text-white mb-6 pb-4 border-b-2 border-brand">
                     {section.category}
                   </h2>
                   <div className="space-y-4">
                     {section.questions.map((qa, qidx) => (
                       <details
                         key={qidx}
-                        className="group border border-gray-300 rounded-lg p-6 hover:border-brand transition cursor-pointer"
+                        className="group border border-[#2d2d2d] rounded-lg p-6 hover:border-brand transition cursor-pointer"
                       >
-                        <summary className="flex justify-between items-center font-semibold text-gray-900 cursor-pointer select-none">
+                        <summary className="flex justify-between items-center font-semibold text-white cursor-pointer select-none">
                           {qa.q}
-                          <span className="text-2xl group-open:rotate-180 transition">▼</span>
+                          <span className="text-2xl group-open:rotate-180 transition text-brand">▼</span>
                         </summary>
-                        <p className="text-gray-700 mt-4">{qa.a}</p>
+                        <p className="text-gray-400 mt-4">{qa.a}</p>
                       </details>
                     ))}
                   </div>
@@ -168,17 +169,15 @@ export default function FAQ() {
               ))}
             </div>
 
-            <div className="mt-16 p-8 bg-blue-50 rounded-lg border border-blue-200 text-center">
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Didn't find your answer?</h3>
-              <p className="text-gray-700 mb-4">
-                Email us at <a href="mailto:hello@vibecoach.com" className="text-brand hover:text-brand-dark transition">hello@vibecoach.com</a> or book a discovery call to ask directly.
+            <div className="mt-16 p-8 bg-[#1a1a1a] rounded-lg border border-[#2d2d2d] text-center">
+              <h3 className="text-xl font-semibold text-white mb-2">Didn't find your answer?</h3>
+              <p className="text-gray-400 mb-4">
+                Email us at <a href="mailto:hello@vibecoach.com" className="text-brand hover:text-[#ea580c] transition">hello@vibecoach.com</a> or book a discovery call to ask directly.
               </p>
-              <a
+              <CTAButton
                 href="/contact"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-brand text-white font-medium hover:bg-brand-dark transition"
-              >
-                Get in Touch
-              </a>
+                text="Get in Touch"
+              />
             </div>
           </div>
         </section>

@@ -7,31 +7,30 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white">
+    <header className="sticky top-0 z-50 w-full border-b border-[#2d2d2d] bg-[#0a0a0a]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2 font-bold text-2xl text-brand">
-            <span>🎯</span>
-            <span>Vibe Coach</span>
+            <span>VC</span>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link href="/services" className="text-sm font-medium text-gray-700 hover:text-brand transition">
+            <Link href="/services" className="text-sm font-medium text-gray-300 hover:text-brand transition">
               Services
             </Link>
-            <Link href="/how-it-works" className="text-sm font-medium text-gray-700 hover:text-brand transition">
+            <Link href="/how-it-works" className="text-sm font-medium text-gray-300 hover:text-brand transition">
               How It Works
             </Link>
-            <Link href="/about" className="text-sm font-medium text-gray-700 hover:text-brand transition">
+            <Link href="/about" className="text-sm font-medium text-gray-300 hover:text-brand transition">
               About
             </Link>
-            <Link href="/contact" className="text-sm font-medium text-gray-700 hover:text-brand transition">
+            <Link href="/contact" className="text-sm font-medium text-gray-300 hover:text-brand transition">
               Contact
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-6 py-2 rounded-lg bg-brand text-white font-medium hover:bg-brand-dark transition"
+              className="inline-flex items-center justify-center px-6 py-2 rounded-lg bg-brand text-[#0a0a0a] font-medium hover:bg-[#ea580c] transition"
             >
               Book a Call
             </Link>
@@ -39,7 +38,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden"
+            className="md:hidden text-gray-300 hover:text-brand transition"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -52,21 +51,21 @@ export default function Header() {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden pb-4 space-y-2">
-            <Link href="/services" className="block py-2 text-sm font-medium text-gray-700 hover:text-brand">
+            <Link href="/services" className="block py-2 text-sm font-medium text-gray-300 hover:text-brand">
               Services
             </Link>
-            <Link href="/how-it-works" className="block py-2 text-sm font-medium text-gray-700 hover:text-brand">
+            <Link href="/how-it-works" className="block py-2 text-sm font-medium text-gray-300 hover:text-brand">
               How It Works
             </Link>
-            <Link href="/about" className="block py-2 text-sm font-medium text-gray-700 hover:text-brand">
+            <Link href="/about" className="block py-2 text-sm font-medium text-gray-300 hover:text-brand">
               About
             </Link>
-            <Link href="/contact" className="block py-2 text-sm font-medium text-gray-700 hover:text-brand">
+            <Link href="/contact" className="block py-2 text-sm font-medium text-gray-300 hover:text-brand">
               Contact
             </Link>
             <Link
               href="/contact"
-              className="block w-full text-center px-6 py-2 rounded-lg bg-brand text-white font-medium hover:bg-brand-dark transition"
+              className="block w-full text-center px-6 py-2 rounded-lg bg-brand text-[#0a0a0a] font-medium hover:bg-[#ea580c] transition"
             >
               Book a Call
             </Link>

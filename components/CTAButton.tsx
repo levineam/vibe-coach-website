@@ -24,8 +24,8 @@ export default function CTAButton({
   }
 
   const variantClasses = {
-    primary: 'bg-brand text-white hover:bg-brand-dark',
-    secondary: 'bg-gray-200 text-gray-900 hover:bg-gray-300'
+    primary: 'bg-brand text-[#0a0a0a] hover:bg-[#ea580c]',
+    secondary: 'bg-brand text-[#0a0a0a] hover:bg-[#ea580c]'
   }
 
   return (

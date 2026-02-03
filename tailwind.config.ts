@@ -8,9 +8,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'brand': '#1e40af',
-        'brand-dark': '#1e3a8a',
+        'brand': '#f97316',
+        'brand-dark': '#ea580c',
         'accent': '#f97316',
+        'dark-bg': '#0a0a0a',
+        'dark-card': '#1a1a1a',
+        'dark-border': '#2d2d2d',
+      },
+      backgroundColor: {
+        'dark': '#0a0a0a',
+      },
+      textColor: {
+        'light': '#f5f5f5',
       }
     },
   },
